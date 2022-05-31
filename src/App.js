@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, {useState} from 'react'
+import q from '../src/img/756504609782470.jpg'
+import w from '../src/img/Без названия.jpg'
+const App = () => {
+let [img,image] = useState(q)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <div>
+     <img src={q} width={40}/>
+      <img src={w}/>
+     </div>
+      <img src={img}/>
+      <div>
+        <button onClick={()=>image(q)}>knopka</button>
+        <button onClick={()=>image(w)}>knopka2</button>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
